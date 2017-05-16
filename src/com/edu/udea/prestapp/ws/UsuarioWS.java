@@ -22,20 +22,20 @@ public class UsuarioWS {
 	@Produces(MediaType.TEXT_HTML)
 	public String autenticar (@QueryParam("login")String login, @QueryParam("pws")String pws) {
 		String retorno = login;
-		if(usuarioBL != null) {
+		/*if(usuarioBL != null) {
 			return retorno;
 		}
 		else {
 			return "usuarioBL es nulo";
-		}
-		/*try {
+		}*/
+		try {
 			usuarioBL.doLogin(login, pws);
 			return login;
 		}catch(ExceptionController e) {
 			return e.getMessage();
 		}
-		return retorno;
-		*/
+		
+		
 		
 	}
 }
