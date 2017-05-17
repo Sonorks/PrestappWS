@@ -22,6 +22,29 @@ import com.edu.udea.prestapp.dto.Usuario;
 import com.edu.udea.prestapp.exception.ExceptionController;
 import com.google.gson.Gson;
 
+/**
+ * @author Cristian Berrio - cbp453252.hdrl@gmail.com
+ * @author Julian Vasquez - julivas96@gmail.com
+ * @author David Acevedo - davida.acevedo@udea.edu.co
+ * @version = 1.0
+ * 
+ * En esta clase se crearan los servicios necesarios para obtener la informacion
+ * de los metodos creados en la clase ObjetoBL.
+ * 
+ * El metodo obtenerObjetosDisponibles es de tipo GET y produce como retorno
+ * un objeto tipo JSON con todos los objetos disponibles en la BD
+ * 
+ * El metodo obtenerObjetosPrestados es similar a obtenerObjetosDisponibles pero 
+ * devuelve los objetos no disponibles en la BD
+ * 
+ * El metodo modificarDisponibilidad es de tipo PUT y sirve para hacer una
+ * actualización del estado de los objetos, se usa cuando se realizen prestamos, devoluciones
+ * o reservas.
+ * 
+ * El metodo eliminarObjeto como su nombre lo dice es del tipo DELETE y sirve para
+ * eliminar los objetos en caso de que sea necesario.
+ * 
+ */
 
 @Path("objeto")
 @Component
