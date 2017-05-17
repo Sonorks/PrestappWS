@@ -22,12 +22,6 @@ public class UsuarioWS {
 	@Produces(MediaType.TEXT_HTML)
 	public String autenticar (@QueryParam("login")String login, @QueryParam("pws")String pws) {
 		String retorno = login;
-		/*if(usuarioBL != null) {
-			return retorno;
-		}
-		else {
-			return "usuarioBL es nulo";
-		}*/
 		try {
 			usuarioBL.doLogin(login, pws);
 			return login;
