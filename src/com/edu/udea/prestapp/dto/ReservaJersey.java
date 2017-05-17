@@ -13,6 +13,8 @@ public class ReservaJersey {
 	private Date fechaReserva;
 	private Date fechaPrestamo;
 	
+	public ReservaJersey(){};
+	
 	public ReservaJersey(Usuario usuario, Objeto objeto, Date fechaReserva, Date fechaPrestamo) {
 		this.usuario = usuario;
 		this.objeto = objeto;
