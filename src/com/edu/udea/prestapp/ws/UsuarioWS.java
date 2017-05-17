@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.UsuarioBL;
+import com.edu.udea.prestapp.dto.Usuario;
 import com.edu.udea.prestapp.exception.ExceptionController;
 @Path("usuario")
 @Component
@@ -28,8 +29,17 @@ public class UsuarioWS {
 		}catch(ExceptionController e) {
 			return e.getMessage();
 		}
+	}
+	
+	public String CambiarContraseña (@QueryParam("usuario")String usuario, @QueryParam("correo")String correo, @QueryParam("contrasenaActual")String contrasenaActual, 
+			@QueryParam("contrasenaNueva")String contrasenaNueva, @QueryParam("username")Usuario username){
 		
-		
-		
+		String retorno = usuario;
+		try{
+			usuarioBL.restablecerContrasena(usuario,correo,contrasenaActual,contrasenaNueva,username);
+			return usuario;
+		}catch(ExceptionController e) {
+			return e.getMessage();
+		} 
 	}
 }
