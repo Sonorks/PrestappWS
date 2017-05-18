@@ -1,11 +1,13 @@
 package com.edu.udea.prestapp.ws;
 
 import javax.print.attribute.standard.Media;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -66,12 +68,15 @@ public class UsuarioWS {
 	}
 	
 	@PUT//Para definir que los datos del servicio se envian por PUT
-	@Produces(MediaType.TEXT_PLAIN)//Devuelve los datos en texto plano
+	@Consumes(MediaType.TEXT_PLAIN)//Recibe los datos en texto plano
 	@Path("cambiarContrasena")//Direccion con la cual se ingresa al servicio
 	//Metodo para cambiar la contraseña
-	public String cambiarContrasena (@QueryParam("usuario")String usuario, @QueryParam("correo")String correo, @QueryParam("contrasenaActual")String contrasenaActual, 
-			@QueryParam("contrasenaNueva")String contrasenaNueva, @QueryParam("username")Usuario username){
-		
+	public String cambiarContrasena (@QueryParam("usuario")String usuario, 
+									@QueryParam("correo")String correo, 
+									@QueryParam("contrasenaActual")String contrasenaActual, 
+									@QueryParam("contrasenaNueva")String contrasenaNueva,
+									@QueryParam("username")String username){
+								
 		String retorno = "";
 		try{
 			usuarioBL.restablecerContrasena(usuario,correo,contrasenaActual,contrasenaNueva,username);//Se implementa el metodo desde el UsuarioBL
@@ -86,9 +91,16 @@ public class UsuarioWS {
 	@Produces(MediaType.TEXT_PLAIN)//Devuelve los datos en texto plano
 	@Path("registroUsuario")//Direccion con la cual se ingresa al servicio
 	//Metodo para registrar usuarios
-	public String registroUsuario(@QueryParam("usuario")String usuario,@QueryParam("contrasena")String contrasena,@QueryParam("contrasena2") String contrasena2,
-			@QueryParam("tipoId")String tipoId, @QueryParam("id")int id,@QueryParam("nombres")String nombres,@QueryParam("apellidos")String apellidos,
-			@QueryParam("correo")String correo, @QueryParam("telefono")String telefono, @QueryParam("usuarioAdmin")Usuario usuarioAdmin){
+	public String registroUsuario(@QueryParam("usuario")String usuario,
+			@QueryParam("contrasena")String contrasena,
+			@QueryParam("contrasena2") String contrasena2,
+			@QueryParam("tipoId")String tipoId, 
+			@QueryParam("id")int id,
+			@QueryParam("nombres")String nombres,
+			@QueryParam("apellidos")String apellidos,
+			@QueryParam("correo")String correo, 
+			@QueryParam("telefono")String telefono,
+			@QueryParam("usuarioAdmin")String usuarioAdmin){
 		
 		String retorno= "";
 		try{
@@ -101,11 +113,16 @@ public class UsuarioWS {
 	}
 	
 	@PUT//Para definir que los datos del servicio se envian por PUT
-	@Produces(MediaType.TEXT_PLAIN)//Devuelve los datos en texto plano
+	@Consumes(MediaType.TEXT_PLAIN)//Recibe los datos en texto plano
 	@Path("modificarDatos")//Direccion con la cual se ingresa al servicio
 	//Metodo para modificar los datos de un usuario
-	public String modificarDatos(@QueryParam("usuario")String usuario, @QueryParam("contrasena")String contraseña, @QueryParam("nombres")String nombres, @QueryParam("apellidos")String apellidos, 
-			 @QueryParam("telefono")String telefono, @QueryParam("correo")String correo, @QueryParam("usuarioManipulador")Usuario usuarioManipulador){
+	public String modificarDatos(@QueryParam("usuario")String usuario, 
+			@QueryParam("contrasena")String contraseña, 
+			@QueryParam("nombres")String nombres, 
+			@QueryParam("apellidos")String apellidos, 
+			 @QueryParam("telefono")String telefono, 
+			 @QueryParam("correo")String correo, 
+			 @QueryParam("usuarioManipulador")String usuarioManipulador){
 		try{
 			usuarioBL.modificarDatosDeUsuario(usuario, contraseña, nombres, apellidos, telefono, correo, usuarioManipulador);//Se implementa el metodo desde el UsuarioBL
 			return "Datos modificados exitosamente";//Mensaje de notificacion de la operacion
@@ -118,7 +135,8 @@ public class UsuarioWS {
 	@Produces(MediaType.TEXT_PLAIN)//Devuelve los datos en texto plano
 	@Path("ban/{usuario}")//Direccion con la cual se ingresa al servicio
 	//Metodo para eliminar un usuario en la base de datos
-	public String eliminarUsuario(@QueryParam("usuario")String usuario, @QueryParam("admin")Usuario admin){
+	public String eliminarUsuario(@PathParam("usuario")String usuario, 
+			@QueryParam("admin")String admin){
 		try{
 			usuarioBL.eliminarUsuario(usuario, admin);//Se implementa el metodo desde el UsuarioBL
 			return "Baneado papu";//Mensaje de notificacion de la operacion
