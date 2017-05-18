@@ -16,6 +16,34 @@ import org.springframework.stereotype.Component;
 import com.edu.udea.prestapp.bl.UsuarioBL;
 import com.edu.udea.prestapp.dto.Usuario;
 import com.edu.udea.prestapp.exception.ExceptionController;
+
+/**
+ * @author Cristian Berrio - cbp453252.hdrl@gmail.com
+ * @author Julian Vasquez - julivas96@gmail.com
+ * @author David Acevedo - davida.acevedo@udea.edu.co
+ * @version = 1.0
+ * 
+ * En esta clase se crearan los servicios necesarios para obtener la informacion
+ * de los metodos creados en la clase UsuarioWS
+ * 
+ * Se tiene un metodo de tipo POST para realizar el logeo de una manera mas segura
+ * solicitando el login del usuario y la contraseña para confirmar la identidad.
+ * 
+ * con el metodo cambiarContrasena el cual es del tipo PUT se deben obtener el usuario,
+ * la nueva contrasena, la contrasena actual y el correo para verificar los datos del usuario
+ * antes de realizar los cambios
+ * 
+ * el metodo registroUsuario que es de tipo POST solicita los datos del usuario para 
+ * añadirlo a la base de datos
+ * 
+ * El metodo modificarDatos permite modificar los datos del usuario por medio de un PUT
+ * solicitando los datos generales del usuario y la contraseña para validar la identidad.
+ * 
+ * Para eliminarUsuario solo es necesario el usuario a eliminar y el usuario del admin
+ * para verificar que si se tiene la autorización necesaria.
+ * 
+ */
+
 @Path("usuario")
 @Component
 public class UsuarioWS {

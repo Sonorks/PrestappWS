@@ -11,6 +11,24 @@ import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.PrestamoBL;
 
+/**
+ * @author Cristian Berrio - cbp453252.hdrl@gmail.com
+ * @author Julian Vasquez - julivas96@gmail.com
+ * @author David Acevedo - davida.acevedo@udea.edu.co
+ * @version = 1.0
+ * 
+ * En esta clase se crearan los servicios necesarios para obtener la informacion
+ * de los metodos creados en la clase PrestamoBL.
+ * 
+ * con el método realizarPrestamo se hace una peticion tipo POST para añadir un nuevo
+ * prestamo a la base de datos por medio de la url /prestamo/realizarPrestamo
+ * recibiendo los parametros de tipo String usuario(nombre de usuario) y el id del objeto
+ * 
+ * El metodo realizarDevolucion realiza una nueva devolución usando POST 
+ * en la url prestamo/realizarDevolucion recibiendo como parametros el usuario del admin,
+ * el id del objeto y el id del usuario, todo de tipo String
+ */
+
 @Path("prestamo")
 @Component
 public class PrestamoWS {

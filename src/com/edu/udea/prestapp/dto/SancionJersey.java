@@ -4,6 +4,22 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author Cristian Berrio - cbp453252.hdrl@gmail.com
+ * @author Julian Vasquez - julivas96@gmail.com
+ * @author David Acevedo - davida.acevedo@udea.edu.co
+ * @version = 1.0
+ * 
+ * En esta clase se determinan los atributos de Sancion
+ * id se refiere al identificador unico
+ * Usuario es el usuario que se sanciona
+ * tipoSancion es el tipo de sanción a aplicar: Prestamo vencido, Incumplir reserva,
+ * Objeto perdido y Objeto dañado.
+ * inicioSancion es la fecha en la cual se sanciona al usuario
+ * finSancion es la fecha cuando se retira la sancion, puede ser programada o retirada manualmente
+ * 
+ */
+
 @XmlRootElement 
 public class SancionJersey {
 	//La sancion se aplica a los usuarios que han prestado objetos, hay varios tipos de sanciones

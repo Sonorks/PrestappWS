@@ -4,6 +4,21 @@ import java.util.*;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+/**
+ * @author Cristian Berrio - cbp453252.hdrl@gmail.com
+ * @author Julian Vasquez - julivas96@gmail.com
+ * @author David Acevedo - davida.acevedo@udea.edu.co
+ * @version = 1.0
+ * 
+ * En esta clase se determinan los atributos de Reserva
+ * id se refiere al identificador unico
+ * Usuario es el usuario que realiza la reserva
+ * Objeto es el objeto a reservar
+ * fechaReserva es la fecha en la que se realizó la reserva
+ * fechaPrestamo es la fecha en la que se debe realizar el prestamo solicitado en reserva.
+ * 
+ */
 @XmlRootElement
 public class ReservaJersey {
 	//La reserva se aplica a los objetos que se prestan en el laboratorio
