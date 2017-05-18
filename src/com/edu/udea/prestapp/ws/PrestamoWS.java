@@ -36,29 +36,32 @@ public class PrestamoWS {
 	@Autowired
 	PrestamoBL prestamoBL;
 	
-	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("realizarPrestamo")
+	@POST//Para definir que los datos del servicio se envian por POST
+	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
+	@Path("realizarPrestamo")//Direccion con la cual se ingresa al servicio
+	//Metodo para realizar un prestamo en el laboratorio
 	public String realizarPrestamo(@QueryParam("usuario")String usuario, @QueryParam("id")String id) {
-		int idObjeto = Integer.parseInt(id);
+		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
-			prestamoBL.realizarPrestamo(usuario, idObjeto);
+			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoBL
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		return "listo";
 	}
-	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("realizarDevolucion")
+	@POST//Para definir que los datos del servicio se envian por POST
+	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
+	@Path("realizarDevolucion")//Direccion con la cual se ingresa al servicio
+	//Metodo para realizar una devolucion de un objeto, previamente prestado
 	public String realizarDevolucion(@QueryParam("admin")String admin,
 			@QueryParam("idObjeto")String idObjeto,
 			@QueryParam("idUsuario")String idUsuario
 			) {
 		int idObj = Integer.parseInt(idObjeto);
 		int idUser = Integer.parseInt(idUsuario);
+		//Se hace el parsing para poder operar los numeros en el metodo
 		try {
-			prestamoBL.realizarDevolucion(admin, idObj, idUser);
+			prestamoBL.realizarDevolucion(admin, idObj, idUser);//Se llama el metodo desde prestamoBL
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
