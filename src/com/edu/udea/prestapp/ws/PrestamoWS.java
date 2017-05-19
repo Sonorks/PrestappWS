@@ -6,10 +6,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.PrestamoBL;
+import com.edu.udea.prestapp.exception.ExceptionController;
 
 /**
  * @author Cristian Berrio - cbp453252.hdrl@gmail.com
@@ -32,7 +34,7 @@ import com.edu.udea.prestapp.bl.PrestamoBL;
 @Path("prestamo")
 @Component
 public class PrestamoWS {
-	
+	final Logger log = Logger.getLogger(PrestamoWS.class.getName());
 	@Autowired
 	PrestamoBL prestamoBL;
 	
@@ -44,8 +46,9 @@ public class PrestamoWS {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
 			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("error al realizar Prestamo");
+			e.getMessage();
 		}
 		return "listo";
 	}
@@ -62,8 +65,9 @@ public class PrestamoWS {
 		//Se hace el parsing para poder operar los numeros en el metodo
 		try {
 			prestamoBL.realizarDevolucion(admin, idObj, idUser);//Se llama el metodo desde prestamoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("Error al realizar devolucion");
+			e.getMessage();
 		}
 		return "listo";
 	}

@@ -12,9 +12,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.edu.udea.prestapp.bl.PrestamoBL;
 import com.edu.udea.prestapp.bl.UsuarioBL;
 import com.edu.udea.prestapp.dto.Usuario;
 import com.edu.udea.prestapp.exception.ExceptionController;
@@ -49,7 +51,7 @@ import com.edu.udea.prestapp.exception.ExceptionController;
 @Path("usuario")
 @Component
 public class UsuarioWS {
-	
+	final Logger log = Logger.getLogger(UsuarioWS.class.getName());
 	@Autowired
 	UsuarioBL usuarioBL;
 	
@@ -63,6 +65,7 @@ public class UsuarioWS {
 			usuarioBL.doLogin(login, pws);//Se implementa el metodo desde el UsuarioBL
 			return login;
 		}catch(ExceptionController e) {
+			log.error("error al autenticar");
 			return e.getMessage();
 		}
 	}
@@ -83,6 +86,7 @@ public class UsuarioWS {
 			retorno = "Contraseña restablecida";
 			return retorno;
 		}catch(ExceptionController e) {
+			log.error("error al cambiar contraseña");
 			return e.getMessage();
 		} 
 	}
@@ -108,6 +112,7 @@ public class UsuarioWS {
 			retorno = "Registro exitoso";//Mensaje de notificacion de la operacion
 			return retorno;
 		}catch(ExceptionController e){
+			log.error("error al registrar usuario");
 			return e.getMessage();
 		}
 	}
@@ -127,6 +132,7 @@ public class UsuarioWS {
 			usuarioBL.modificarDatosDeUsuario(usuario, contraseña, nombres, apellidos, telefono, correo, usuarioManipulador);//Se implementa el metodo desde el UsuarioBL
 			return "Datos modificados exitosamente";//Mensaje de notificacion de la operacion
 		}catch(ExceptionController e){
+			log.error("error al modificar datos de usuario");
 			return e.getMessage();
 		}
 	}
@@ -139,8 +145,9 @@ public class UsuarioWS {
 			@QueryParam("admin")String admin){
 		try{
 			usuarioBL.eliminarUsuario(usuario, admin);//Se implementa el metodo desde el UsuarioBL
-			return "Baneado papu";//Mensaje de notificacion de la operacion
+			return "usuario eliminado";//Mensaje de notificacion de la operacion
 		}catch(ExceptionController e){
+			log.error("error al eliminar usuario");
 			return e.getMessage();
 		}
 	}

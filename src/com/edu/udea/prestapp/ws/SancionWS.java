@@ -8,9 +8,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.edu.udea.prestapp.bl.PrestamoBL;
 import com.edu.udea.prestapp.bl.SancionBL;
 
 /**
@@ -39,7 +41,7 @@ import com.edu.udea.prestapp.bl.SancionBL;
 @Path("sancion")
 @Component
 public class SancionWS {
-
+	final Logger log = Logger.getLogger(SancionWS.class.getName());
 	@Autowired
 	SancionBL sancionBL;
 	
@@ -53,6 +55,7 @@ public class SancionWS {
 		try {
 			sancionBL.eliminarSancion(idSancion, usuario);//Se llama el metodo desde sancionBL
 		}catch(Exception e) {
+			log.error("error al eliminar sancion");
 			e.printStackTrace();
 		}
 		return "listo";
@@ -70,6 +73,7 @@ public class SancionWS {
 		try {
 			sancionBL.sancionarUsuario(tipoSancion, usuario, admin, idObjeto, idReserva);//Se llama el metodo desde sancionBL
 		}catch(Exception e) {
+			log.error("error al sancionar usuario");
 			e.getMessage();
 		}
 		return "listo";

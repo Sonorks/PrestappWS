@@ -12,10 +12,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.ObjetoBL;
+import com.edu.udea.prestapp.bl.PrestamoBL;
 import com.edu.udea.prestapp.bl.UsuarioBL;
 import com.edu.udea.prestapp.dto.Objeto;
 import com.edu.udea.prestapp.dto.Usuario;
@@ -50,7 +52,7 @@ import com.google.gson.Gson;
 @Component
 //Objeto, se refiere a los dispositivos que el laboratorio tiene para prestar
 public class ObjetoWS {
-
+	final Logger log = Logger.getLogger(ObjetoWS.class.getName());
 	@Autowired
 	ObjetoBL objetoBL;
 	
@@ -67,8 +69,9 @@ public class ObjetoWS {
 		try {
 			lista = objetoBL.mostrarObjetos();//Llama el metodo desde objetoBL
 			json = new Gson().toJson(lista);//Manejamos la libreria gson de google, por lo que hay que añadirla en el build path
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("Error al obtener objetos disponibles");
+			return e.getMessage();
 		}
 		return json;
 	}
@@ -83,8 +86,9 @@ public class ObjetoWS {
 		try {
 			lista = objetoBL.mostrarObjetosPrestados();//Llama el metodo desde objetoBL
 			json = new Gson().toJson(lista);//Manejamos la libreria gson de google, por lo que hay que añadirla en el build path
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("Error al obtener objetos prestados");
+			return e.getMessage();
 		}
 		return json;
 	}
@@ -100,8 +104,9 @@ public class ObjetoWS {
 		//Se necesita hacer el parsing para poder operar los numeros en el metodo
 		try {
 			objetoBL.modificarDisponibilidad(idObj, tipoCambioObj);//Llama el metodo desde objetoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("Error al modificar disponibilidad de objeto");
+			return e.getMessage();
 		}
 		
 		return "listo";
@@ -116,8 +121,9 @@ public class ObjetoWS {
 		/*System.out.println(idObjeto);*/
 		try {
 			objetoBL.eliminarObjeto(usuario, idObjeto);//Se llama el metodo desde objetoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+		}catch(ExceptionController e) {
+			log.error("Error al eliminar objeto");
+			e.getMessage();
 		}
 		return "listo";
 	}	

@@ -3,6 +3,7 @@ package com.edu.udea.prestapp.ws;
 import java.util.Date;
 
 import javax.ws.rs.DELETE;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -10,9 +11,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.edu.udea.prestapp.bl.PrestamoBL;
 import com.edu.udea.prestapp.bl.ReservaBL;
 import com.edu.udea.prestapp.exception.ExceptionController;
 import com.google.gson.Gson;
@@ -44,7 +47,7 @@ import com.google.gson.Gson;
 @Path("reserva")
 @Component
 public class ReservaWS {
-	
+	final Logger log = Logger.getLogger(ReservaWS.class.getName());
 	@Autowired
 	ReservaBL reservaBL;
 	
@@ -57,6 +60,7 @@ public class ReservaWS {
 			reservaBL.reservarObjeto(usuario, idObjeto, fechaPrestamo);//Se llama el metodo desde reservaBL
 			return "Reserva realizada";
 		}catch(ExceptionController e) {
+			log.error("Error al realizar reserva");
 			return e.getMessage();
 		}
 	}
@@ -70,6 +74,7 @@ public class ReservaWS {
 			reservaBL.cancelarReserva(id, usuario);//Se llama el metodo desde reservaBL
 			return "Reserva cancelada";
 		}catch(ExceptionController e) {
+			log.error("error al cancelar reserva");
 			return e.getMessage();
 		}
 	}
@@ -83,6 +88,7 @@ public class ReservaWS {
 			reservaBL.modificarReserva(id, usuario, nuevaFecha);//Se llama el metodo desde reservaBL
 			return "Reserva modificada";
 		}catch(ExceptionController e) {
+			log.error("error al modificar reserva");
 			return e.getMessage();
 		}
 	}
