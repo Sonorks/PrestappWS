@@ -61,7 +61,7 @@ public class UsuarioWS {
 		String retorno = login;
 		try {
 			usuarioBL.doLogin(login, pws);//Se implementa el metodo desde el UsuarioBL
-			return login;
+			return "login exitoso";
 		}catch(ExceptionController e) {
 			return e.getMessage();
 		}

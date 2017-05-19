@@ -100,11 +100,11 @@ public class ObjetoWS {
 		//Se necesita hacer el parsing para poder operar los numeros en el metodo
 		try {
 			objetoBL.modificarDisponibilidad(idObj, tipoCambioObj);//Llama el metodo desde objetoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+			return "Modificacion exitosa";
+		}catch(ExceptionController e) {
+			return e.getMessage();
 		}
 		
-		return "listo";
 	}
 	
 	@DELETE//Para definir que los datos del servicio se envian por DELETE
@@ -113,12 +113,13 @@ public class ObjetoWS {
 	//Metodo para eliminar un objeto de la lista de objetos del laboratorio
 	public String eliminarObjeto(@PathParam("id")String id, @QueryParam("usuario")String usuario) {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
-		/*System.out.println(idObjeto);*/
+		System.out.println(usuario);
 		try {
 			objetoBL.eliminarObjeto(usuario, idObjeto);//Se llama el metodo desde objetoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+			return "Objeto eliminado";
+		}catch(ExceptionController e) {
+			return e.getMessage();
 		}
-		return "listo";
+		
 	}	
 }

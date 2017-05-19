@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.PrestamoBL;
+import com.edu.udea.prestapp.exception.ExceptionController;
 
 /**
  * @author Cristian Berrio - cbp453252.hdrl@gmail.com
@@ -37,18 +38,19 @@ public class PrestamoWS {
 	PrestamoBL prestamoBL;
 	
 	@POST//Para definir que los datos del servicio se envian por POST
-	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
+	@Produces(MediaType.TEXT_PLAIN)//Retorna la lista en formato JSON
 	@Path("realizarPrestamo")//Direccion con la cual se ingresa al servicio
 	//Metodo para realizar un prestamo en el laboratorio
 	public String realizarPrestamo(@QueryParam("usuario")String usuario, @QueryParam("id")String id) {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
-			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoBL
-		}catch(Exception e) {
-			e.printStackTrace();
+			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoB;
+			return "prestamo realizado";
+		}catch(ExceptionController e) {
+			return e.getMessage();
 		}
-		return "listo";
 	}
+	
 	@POST//Para definir que los datos del servicio se envian por POST
 	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
 	@Path("realizarDevolucion")//Direccion con la cual se ingresa al servicio

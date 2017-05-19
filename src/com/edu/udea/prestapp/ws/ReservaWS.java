@@ -3,6 +3,7 @@ package com.edu.udea.prestapp.ws;
 import java.util.Date;
 
 import javax.ws.rs.DELETE;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -50,10 +51,14 @@ public class ReservaWS {
 	
 	@POST//Para definir que los datos del servicio se envian por POST
 	@Produces(MediaType.TEXT_PLAIN)//Devuelve la notificacion en texto plano
-	@Path("reserva")//Direccion con la cual se ingresa al servicio
+	@Path("reservar")//Direccion con la cual se ingresa al servicio
 	//Metodo para realizar una reserva de un objeto del laboratorio
-	public String reservar(@QueryParam("usuario")String usuario, @QueryParam("idObjeto")int idObjeto, @QueryParam("fechaPrestamo")Date fechaPrestamo){
+	public String reservar(
+			@QueryParam("usuario")String usuario, 
+			@QueryParam("idObjeto")int idObjeto){
 		try{
+			Date fechaPrestamo = new Date();
+			fechaPrestamo.setTime(fechaPrestamo.getTime()+86400000*8); 
 			reservaBL.reservarObjeto(usuario, idObjeto, fechaPrestamo);//Se llama el metodo desde reservaBL
 			return "Reserva realizada";
 		}catch(ExceptionController e) {
