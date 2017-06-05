@@ -49,11 +49,11 @@ public class SancionWS {
 	@Produces(MediaType.TEXT_PLAIN)//Devuelve la notificacion en texto plano
 	@Path("eliminar/{id}")//Direccion con la cual se ingresa al servicio
 	//Metodo para eliminar una sancion asignada a un usuario
-	public String eliminarSancion(@PathParam("id")String id, @QueryParam("usuario")String usuario) {
+	public String eliminarSancion(@PathParam("id")String id, @QueryParam("usuario")String usuario, @QueryParam("tipoSancion")String tipoSancion) {
 		int idSancion = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		/*System.out.println(idSancion);*/
 		try {
-			sancionBL.eliminarSancion(idSancion, usuario);//Se llama el metodo desde sancionBL
+			sancionBL.eliminarSancion(idSancion, usuario, tipoSancion);//Se llama el metodo desde sancionBL
 		}catch(Exception e) {
 			log.error("error al eliminar sancion");
 			e.printStackTrace();

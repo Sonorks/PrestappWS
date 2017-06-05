@@ -104,11 +104,12 @@ public class UsuarioWS {
 			@QueryParam("apellidos")String apellidos,
 			@QueryParam("correo")String correo, 
 			@QueryParam("telefono")String telefono,
+			@QueryParam("admin")int admin,
 			@QueryParam("usuarioAdmin")String usuarioAdmin){
 		
 		String retorno= "";
 		try{
-			usuarioBL.registrarUsuario(usuario, contrasena, contrasena2, tipoId, id, nombres, apellidos, correo, telefono, usuarioAdmin);//Se implementa el metodo desde el UsuarioBL
+			usuarioBL.registrarUsuario(usuario, contrasena, contrasena2, tipoId, id, nombres, apellidos, correo, telefono, admin, usuarioAdmin);//Se implementa el metodo desde el UsuarioBL
 			retorno = "Registro exitoso";//Mensaje de notificacion de la operacion
 			return retorno;
 		}catch(ExceptionController e){
