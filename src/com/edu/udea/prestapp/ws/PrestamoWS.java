@@ -42,7 +42,9 @@ public class PrestamoWS {
 	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
 	@Path("realizarPrestamo")//Direccion con la cual se ingresa al servicio
 	//Metodo para realizar un prestamo en el laboratorio
-	public String realizarPrestamo(@QueryParam("usuario")String usuario, @QueryParam("id")String id) {
+	public String realizarPrestamo(
+			@QueryParam("usuario")String usuario, 
+			@QueryParam("id")String id) {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
 			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoBL

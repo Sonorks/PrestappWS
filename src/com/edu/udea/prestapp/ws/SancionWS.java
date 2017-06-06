@@ -65,8 +65,12 @@ public class SancionWS {
 	@Produces(MediaType.APPLICATION_JSON)//Devuelve la notificacion en formato JSON
 	@Path("sancionar")//Direccion con la cual se ingresa al servicio
 	//Metodo para sancionar un usuario
-	public String sancionarUsuario(@QueryParam("tipoSancion")String tipoSancion, @QueryParam("usuario")String usuario,
-			@QueryParam("admin")String admin, @QueryParam("idObjeto")String idObj, @QueryParam("idReserva")String idRes) {
+	public String sancionarUsuario(
+			@QueryParam("tipoSancion")String tipoSancion, 
+			@QueryParam("usuario")String usuario,
+			@QueryParam("admin")String admin, 
+			@QueryParam("idObjeto")String idObj, 
+			@QueryParam("idReserva")String idRes) {
 		int idObjeto = Integer.parseInt(idObj);
 		int idReserva = Integer.parseInt(idRes);
 		//Se hace el parsing para poder operar los numeros en el metodo

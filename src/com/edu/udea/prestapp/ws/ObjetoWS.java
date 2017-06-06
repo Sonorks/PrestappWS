@@ -97,7 +97,9 @@ public class ObjetoWS {
 	@Consumes(MediaType.TEXT_PLAIN)//Retornara la notificación en texto plano
 	@Path("modificarDisponibilidad")//Dirección con la cual se ingresa al servicio
 	//Metodo para modificar o actualizar la disponibilidad de un objeto
-	public String modificarDisponibilidad(@QueryParam("id")String id, @QueryParam("tipoCambio")String tipoCambio) {
+	public String modificarDisponibilidad(
+			@QueryParam("id")String id, 
+			@QueryParam("tipoCambio")String tipoCambio) {
 		/*System.out.println("id: "+id+ " "+tipoCambio);*/
 		int idObj = Integer.parseInt(id);
 		int tipoCambioObj = Integer.parseInt(tipoCambio);
@@ -116,7 +118,8 @@ public class ObjetoWS {
 	@Produces(MediaType.TEXT_PLAIN)//Retornará la notificación en texto plano
 	@Path("eliminar/{id}")//Dirección con la cual se ingresa al servicio. El campo id, es el id del objeto
 	//Metodo para eliminar un objeto de la lista de objetos del laboratorio
-	public String eliminarObjeto(@PathParam("id")String id, @QueryParam("usuario")String usuario) {
+	public String eliminarObjeto(@PathParam("id")String id, 
+			@QueryParam("usuario")String usuario) {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		/*System.out.println(idObjeto);*/
 		try {
