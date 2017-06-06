@@ -1,6 +1,6 @@
 package com.edu.udea.prestapp.ws;
 
-import javax.print.attribute.standard.Media;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -128,7 +128,8 @@ public class UsuarioWS {
 			@QueryParam("apellidos")String apellidos, 
 			 @QueryParam("telefono")String telefono, 
 			 @QueryParam("correo")String correo, 
-			 @QueryParam("usuarioManipulador")String usuarioManipulador){
+			 @QueryParam("usuarioManipulador")String usuarioManipulador)//Usuario el cual esta ejecutando el metodo
+	{
 		try{
 			usuarioBL.modificarDatosDeUsuario(usuario, contraseña, nombres, apellidos, telefono, correo, usuarioManipulador);//Se implementa el metodo desde el UsuarioBL
 			return "Datos modificados exitosamente";//Mensaje de notificacion de la operacion
