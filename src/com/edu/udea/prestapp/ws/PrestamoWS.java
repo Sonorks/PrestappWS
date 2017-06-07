@@ -45,7 +45,8 @@ public class PrestamoWS {
 	//Metodo para realizar un prestamo en el laboratorio
 	public String realizarPrestamo(
 			@QueryParam("usuario")String usuario, 
-			@QueryParam("id")String id) {
+			@QueryParam("id")String id)//Id del objeto 
+		{
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
 			System.out.println("Prestamo a realizar");
@@ -62,14 +63,13 @@ public class PrestamoWS {
 	@Path("realizarDevolucion")//Direccion con la cual se ingresa al servicio
 	//Metodo para realizar una devolucion de un objeto, previamente prestado
 	public String realizarDevolucion(@QueryParam("admin")String admin,
-			@QueryParam("idObjeto")String idObjeto,
-			@QueryParam("idUsuario")String idUsuario
+			@QueryParam("idObjeto")int idObjeto,
+			@QueryParam("idUsuario")int idUsuario
 			) {
-		int idObj = Integer.parseInt(idObjeto);
-		int idUser = Integer.parseInt(idUsuario);
 		//Se hace el parsing para poder operar los numeros en el metodo
 		try {
-			prestamoBL.realizarDevolucion(admin, idObj, idUser);//Se llama el metodo desde prestamoBL
+			System.out.println("paso 1");
+			prestamoBL.realizarDevolucion(admin, idObjeto, idUsuario);//Se llama el metodo desde prestamoBL
 		}catch(ExceptionController e) {
 			log.error("Error al realizar devolucion");
 			e.getMessage();
