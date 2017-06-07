@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import com.edu.udea.prestapp.bl.PrestamoBL;
 import com.edu.udea.prestapp.exception.ExceptionController;
+import com.google.gson.Gson;
 
 /**
  * @author Cristian Berrio - cbp453252.hdrl@gmail.com
@@ -47,12 +48,14 @@ public class PrestamoWS {
 			@QueryParam("id")String id) {
 		int idObjeto = Integer.parseInt(id);//Se hace el parsing para poder operar los numeros en el metodo
 		try {
+			System.out.println("Prestamo a realizar");
 			prestamoBL.realizarPrestamo(usuario, idObjeto);//Se llama el metodo desde prestamoBL
 		}catch(ExceptionController e) {
 			log.error("error al realizar Prestamo");
 			e.getMessage();
 		}
-		return "listo";
+		String json = new Gson().toJson("listo");
+		return json;
 	}
 	@POST//Para definir que los datos del servicio se envian por POST
 	@Produces(MediaType.APPLICATION_JSON)//Retorna la lista en formato JSON
