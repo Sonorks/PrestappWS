@@ -3,9 +3,11 @@ package com.edu.udea.prestapp.ws;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -78,6 +80,7 @@ public class PrestamoWS {
 		try {
 			System.out.println("paso 1");
 			prestamoBL.realizarDevolucion(admin, idObjeto, idUsuario);//Se llama el metodo desde prestamoBL
+			//prestamoBL.eliminarPrestamo(idObjeto, usuario);
 		}catch(ExceptionController e) {
 			log.error("Error al realizar devolucion");
 			e.getMessage();
@@ -96,6 +99,24 @@ public class PrestamoWS {
 		//json = new Gson().toJson(lista);//Manejamos la libreria gson de google, por lo que hay que añadirla en el build path
 		json = new Gson().toJson("trabajo futuro");
 		return json;
+	}
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("eliminarPrestamo")
+	public String eliminarPrestamo(
+		@QueryParam("idObjeto")int idObj, 
+		@QueryParam("usuario")String usuario) {
+	//int idObjeto = Integer.parseInt(idObj);//Se hace el parsing para poder operar los numeros en el metodo
+	/*System.out.println(idObjeto);*/
+	try {
+		//objetoBL.eliminarObjeto(usuario, idObjeto);//Se llama el metodo desde objetoBL
+		prestamoBL.eliminarPrestamo(idObj, usuario);
+	}catch(ExceptionController e) {
+		log.error("Error al eliminar objeto");
+		e.getMessage();
+	}
+	String json = new Gson().toJson("listo");
+	return json;
 	}
 	
 }
