@@ -109,7 +109,7 @@ public class UsuarioWS {
 		
 		String retorno= "";
 		try{
-			usuarioBL.registrarUsuario(usuario, contrasena, contrasena2, tipoId, id, nombres, apellidos, correo, telefono, admin, usuarioAdmin);//Se implementa el metodo desde el UsuarioBL
+			usuarioBL.registrarUsuario(usuario, contrasena, contrasena2, tipoId, id, nombres, apellidos, correo, telefono, usuarioAdmin);//Se implementa el metodo desde el UsuarioBL
 			retorno = "Registro exitoso";//Mensaje de notificacion de la operacion
 			return retorno;
 		}catch(ExceptionController e){
