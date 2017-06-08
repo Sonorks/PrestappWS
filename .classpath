@@ -9,182 +9,222 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/apache-log4j-1.2.17/log4j-1.2.17.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/antlr-2.7.6.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/antlr-2.7.6.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/asm-3.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/commons-collections-3.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/com.springsource.org.aopalliance-1.0.0.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/dom4j-1.6.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/commons-collections-3.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/hibernate3.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/commons-logging.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/dom4j-1.6.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/javassist-3.12.0.GA.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/hibernate3.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/jta-1.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/hibernate-jpa-2.0-api-1.0.1.Final.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/slf4j-api-1.6.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jackson-core-asl-1.5.5.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/LibreriasHibernate/slf4j-log4j12-1.7.2.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jackson-jaxrs-1.5.5.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/com.springsource.org.aopalliance-1.0.0.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jackson-mapper-asl-1.5.5.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/commons-logging.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jackson-xc-1.5.5.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-aop-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/javassist-3.12.0.GA.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-beans-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-apache-client-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-context-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-atom-abdera-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-core-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-client-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-expression-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-core-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-jdbc-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-guice-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-orm-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-json-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-test-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-multipart-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-tx-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-server-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/Spring4/spring-web-4.1.6.RELEASE.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-simple-server-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Desktop/gson-2.2.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jersey-spring-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/mysql-connector-java-5.1.22-bin.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jettison-1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/asm-3.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jsr311-api-1.1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-core-asl-1.5.5.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/jta-1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-jaxrs-1.5.5.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/log4j-1.2.17.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-mapper-asl-1.5.5.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/mysql-connector-java-5.1.22-bin.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-xc-1.5.5.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/oauth-client-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-client-1.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/oauth-server-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-core-1.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/oauth-signature-1.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-json-1.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/slf4j-api-1.6.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-server-1.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/slf4j-log4j12-1.7.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jettison-1.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-aop-4.1.6.RELEASE.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/lib/jsr311-api-1.1.1.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-beans-4.1.6.RELEASE.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/sonorks/Downloads/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-spring-1.4.jar">
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-context-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-core-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-expression-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-jdbc-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-orm-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-test-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-tx-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/spring-web-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/reizzel/Downloads/Libs/gson-2.2.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
